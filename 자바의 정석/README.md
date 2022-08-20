@@ -112,11 +112,9 @@ String은 다른 자료형과 달리, 한 번 사용되면 재사용될 확률�
 그러나 Java 8 이후부터는 pool이 Heap 영역에 저장됨으로써, OOM 에러를 만날 확률이 줄어듦과 동시에 GC 대상이 되어 메모리 관리에서 더 많은 이점을 얻게 되었다.
 
 ### new String(...)을 사용할 때는 언제일까?
-String 문자열은 immutable하기 때문에 thread-safe하다. 그리고 문자열 리터럴 역시 String 문자열이기에 해당 장점을 그대로 갖고, 중복된 값을 저장하지 않아 메모리를 낭비하지 않는다는 장점까지 존재한다.
+String 객체의 값  immutable하기 때문에 thread-safe하다. 그리고 문자열 리터럴 역시 String 문자열이기에 해당 장점을 그대로 갖고, 중복된 값을 저장하지 않아 메모리를 낭비하지 않는다는 장점까지 존재한다. 그에 반해, String 객체는 중복된 값을 가진 객체를 계속 생성할 수 있다.
 
-그에 반해, String 객체는 중복된 값을 가진 객체를 계속 생성할 수 있다. 많은 고민을 했으나, immutable한 값을 가진 객체를 중복 생성하여 사용할 상황을 생각해낼 수 없었다.
-
-심지어 Effective Java (3rd edition)의 [ITEM 6 : 불필요한 객체 생성을 피하라]에서도 아래와 같은 예를 절대 따라하지 말 것! 이라고 표현하였다.
+많은 고민을 했으나, immutable한 값을 가진 객체를 중복 생성하여 사용할 상황을 생각해낼 수 없었다. 심지어 **Effective Java 3rd edition - ITEM 6 : 불필요한 객체 생성을 피하라**에서도 아래와 같은 예를 절대 따라하지 말 것! 이라고 표현하였다.
 
 ```
 String s = new String("JavaChip");
@@ -138,9 +136,9 @@ String s = new String("JavaChip");
 (https://ellerymoon.tistory.com/104)
 - 보안 이슈: 만약 네트워크 통신을 통해서 받은 ID와 password String이 mutable하다면 validation을 거친 이후에도 받아온 String의 안전을 보장할 수 없다.
 - 동기화 이슈: immutable하다면 여러 쓰레드에서 접근해도 thread-safe하다.
-- String.hashCode()를 이용한 캐싱: String이 immutable하므로, 이를 키값으로 사용한 해싱 컬렉션의 퍼포먼스가 향상된다(hashcode()로 정수값을 받아 키값으로 이용하도록 컬렉션들이 설계되어 있음). 이 방식은 String pool에서도 사용되서 결과적으로 기존에 캐싱된 String값이 있는지 빠르게 조회할 수 있다.
+- String.hashCode()를 이용한 캐싱: String 문자열이 immutable하므로, 이를 키값으로 사용한 해싱 컬렉션의 퍼포먼스가 향상된다. 이 방식은 String pool에서도 사용되어 기존에 캐싱된 문자열의 키값이 있는지 빠르게 조회할 수 있다.
 
-더불어 Effective Java (3rd edition)의 [ITEM 17 : 변경 가능성을 최소화하라]에서도 immutable 클래스는 아래와 같은 이유로 적극 권장하였다.
+더불어 **Effective Java 3rd edition - ITEM 17 : 변경 가능성을 최소화하라**에서도 immutable 클래스는 아래와 같은 이유로 적극 권장하였다.
 - 가변 클래스보다 설계, 구현, 사용이 쉽고 오류가 생일 여지도 적다.
 - 불변 객체는 단순하다. 값이 절대 바뀌지 않기 때문에 믿고 사용할 수 있다.
 - 불변하기에 근본적으로 thread-safe하다. 그래서 안심하고 공유할 수 있다.
