@@ -20,3 +20,6 @@
 
 ### 이슈로 질문 남기기
 저희가 공부하고 있는 책, 강의와 관련해서 헷갈리는 내용이 있다면 이슈를 남겨주세요. 열심히 알아봐드립니다 :)
+
+### 스터디 일정
+<img width="756" alt="KakaoTalk_20220727_225301277" src="https://user-images.githubusercontent.com/71240296/185775350-264f61e5-18ca-4d4f-a411-cbfd5aa30690.png">
