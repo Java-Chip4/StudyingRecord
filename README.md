@@ -23,3 +23,8 @@
 
 ### 스터디 일정
 <img width="756" alt="KakaoTalk_20220727_225301277" src="https://user-images.githubusercontent.com/71240296/185775350-264f61e5-18ca-4d4f-a411-cbfd5aa30690.png">
+
+### Spring 계획 
+* __8/29 (월) 세션 리더 - 강승원__ 
+    * HTTP 강의 완강
+* __9/5 (월) 세션 리더 - 송경석__
