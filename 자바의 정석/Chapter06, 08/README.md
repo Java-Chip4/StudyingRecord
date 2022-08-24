@@ -55,7 +55,7 @@
   ```
 
 
-# Chap 8. 예외 처리
+# Chap 8. 예외 처리 (Exception Handling)
 ## 1. 예외 처리
 
 - 컴파일러가 예외처리를 확인하지 않는 RuntimeException클래스들은 ‘unchecked예외’ 라고 부르고, 예외처리를 확인하는 Exception클래스들은 ‘checked예외’라고 부른다.
