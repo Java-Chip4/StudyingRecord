@@ -255,7 +255,106 @@ StringBuilder 외에도 StringBuffer가 존재하는데, 이 역시 가변의 �
 
 
 # Chap 8. 예외 처리 (Exception Handling)
-## 1. 예외 처리
+
+# 실행 흐름 제어용 예외의 강력함
+throw 된 예외는 catch 될 때 까지 함수 호출 스택을 거슬러 올라갑니다.
+따라서 throw와 catch 문법을 사용하면 호출 스택 어디로든 이동할 수 있습니다. if, for문을 사용해서 흐름을 제어하는 것보다 훨씬 강력하죠.(어쩌면 goto보다도 강력합니다)
+
+예를 들어, 아래 재귀 함수는 결과를 순차적으로 return 하면서 탈출하는 전형적인 방식을 따르지 않았습니다. 대신 throw 문 안에 결과를 넣어서 return 없이 한 번에 탈출하고 있습니다.
+
+```java
+(예시가 괜히 복잡하긴 한데 재귀 함수를 예시로 들어야 함수 호출 스택 어디로든 한 번에 이동할 수 있다는 걸 표현하기 쉬울 것 같았습니다)  
+
+void searchRecursive(TreeNode node, Object data ) throws ResultException {
+    if(node.data.equals(data))
+        throw new ResultException(node);
+    } else {
+        searchRecursive(node.leftChild, data );
+        searchRecursive(node.rightChild, data );
+    }
+}  
+
+출처: https://web.archive.org/web/20140430044213/http:/c2.com/cgi-bin/wiki?DontUseExceptionsForFlowControl
+```
+
+searchRecursive 함수를 호출한 함수는 `catch (ResultException e)`로 예외를 받고 있겠죠. 예외 안에 담긴 노드를 빼서 쓰면 복잡한 재귀 리턴 과정을 겪지 않고 쉽게 목표 노드를 찾을 수 있을 것 입니다. 재귀 함수 안에 catch문이 없기에 손쉽게 호출 함수까지 올라올 수 있었기 때문입니다.  
+
+  얼핏 보면 굉장히 편하고 가독성도 좋은 방식 같습니다. 그렇지만 실제로는 이런 코드를 쓰지 않는 이유가 뭘까요?
+
+
+# 예외를 진짜 예외 상황에만 사용해야하는 이유
+몇 가지 이유를 찾았는데 스택 오버플로우와 이펙티바 자바에서 찾은 이유가 가장 좋았습니다. 두 답변의 내용이 겹치지 않아 둘 다 소개합니다.
+
+## 1. stack overflow : "Why not use exceptions as regular flow of control?"
+스택 오버 플로우에 위 질문이 있습니다.  
+가장 높은 점수를 받은 답변의 내용이 와 닿았습니다.
+### 1-1 ) 진짜 exception을 찾기 힘들어진다
+
+
+
+(답변 캡쳐)
+![image](https://user-images.githubusercontent.com/76809524/187076881-85bda321-035b-412d-a9ae-a9440dfcc054.png)
+
+(출처)  https://stackoverflow.com/questions/729379/why-not-use-exceptions-as-regular-flow-of-control
+
+
+요약하자면 일반적인 흐름에서 exception을 남발하면, 정말 exception 처리가 필요해서 한 곳을 찾기가 힘들다고 합니다.  
+실제 예외 처리 한 곳을 찾기 힘들어지면 가독성 문제가 생기겠죠.  
+
+
+### 1-2 ) 예외 디버깅이 힘들어진다(개인적인 의견)
+답변을 본 다음에는 디버깅 문제도 생기겠다는 생각이 들었습니다. 인텔리제이는 예외 중단점 기능을 제공합니다. 예외가 발생한 곳에 자동으로 중단점을 생성해주어 예외 디버깅을 돕는 기능입니다. 그러나 위 경우 처럼 시작하자마자 예외가 200개 나오고, 이후로도 1초에 5개씩 던진다면 디버깅이 힘들어질 것입니다. 조건을 넣어서 훑는 건 여전히 가능하겠지만, 예외 전체를 훑는건 무의미해집니다. 편기한 툴 기능 하나를 잃는다는 점에서도 예외를 남발하면 안 좋습니다.
+
+(예외 디버깅 창)
+
+![image](https://user-images.githubusercontent.com/76809524/187079247-47e0528e-d855-4f6c-aa51-a274ed9e21bf.png)
+
+  
+  ---
+  
+## 2. Effective Java : Item 69 "예외는 진짜 예외 상황에만 사용하라" 에 제시된 이유
+>예외는 （그 이름이 말해주듯） 오직 예외 상황에서만 써야 한다. 절대로 일상적인 제어 흐름용으로 쓰여선 안 된다.  
+` Effective Java p 387 중단부`
+  
+
+이펙티브 자바 item 69에서는 예외를 절대 일상적인 흐름 제어용으로 사용해선 안 된다고 강조합니다.  
+
+### 예시
+더불어 배열 원소를 순회하는 두 가지 코드를 통해 그 이유를 제시합니다.  
+
+
+(책 코드에서 조금 수정)
+```java
+코드 1번
+try {
+    int i = 0;
+    while(true)
+        array[i++].move();
+} catch (ArraylndexOutOfBoundsException e) {
+}
+//무한 루프를 돌다가 배열의 끝에 도달해 ArraylndexOutOfBoundsException이 나면 catch문을 통해 빠져나가는 코드
+```
+
+```java
+코드 2번
+for (Index i : array)
+    i.move();
+//일반적인 코드
+```
+ ### 1번 코드를 작성한 이유에 대한 추론
+ JVM은 배열에 접근할 때마다 경계를 넘었는지 검사합니다. 반복문도 배열의 끝에 도달하면 종료합니다. 코드 2번 같이 일반적인 반복문 안에서 배열에 접근하면 검사가 중복되므로 하나의 검사를 생략하기 위해서 1번 처럼 작성했을 것 입니다. 그러나 이는 잘못된 생각입니다.
+
+
+### 1번 코드가 안 좋은 이유
+
+1. 1번 코드는 직관성이 떨어집니다. 2번 코드는 전형적인 루프문으로 모든 프로그래머들이 보자마자 이해할 수 있는 반면, 1번은 그렇지 않습니다.  
+   
+2. for문을 통해 배열을 순회하는 코드는 JVM이 다양한 최적화를 수행해줍니다. 이 최적화를 통해 위에서 걱정한 중복 검사를 알아서 없애줍니다. 그러나 try-catch 블럭 안에 들어간 코드는 그렇지 않습니다. 예외는 예외 상황을 처리할 목적으로 만들어졌으므로 JVM 구현자가 성능 최적화에는 신경 쓰지 않았을 가능성이 높다고 합니다. 
+   
+3. **1번 코드는 디버깅을 훨씬 어렵게 합니다.** 위 반복문 안에 버그가 있다면 흐름 제어에 쓰인 catch문이 버그를 숨겨 디버깅을 훨씬 어렵게 할 것입니다. 만약 move() 메서드가 내부적으로 제 3의 배열을 사용하다가 `ArraylndexOutOfBoundsException`을 일으킨다면 어떻게 될까요? **2번 코드의 move()라면 이 버그는 catch문에 잡히지 않고 끝까지 올라가서 프로그램을 종료시킬 것입니다. 함수 호출 스택을 보고 즉시 어디에서 버그가 났는지 알 수 있겠죠. 그러나 1번에서는 버그 때문에 발생한 예외를 정상적인 프로그램 실행 흐름으로 오해하고 그냥 넘어갑니다.** 이런 경우에 대한 디버깅은 훨씬 어렵습니다.
+
+
+
 
 - 컴파일러가 예외처리를 확인하지 않는 RuntimeException클래스들은 ‘unchecked예외’ 라고 부르고, 예외처리를 확인하는 Exception클래스들은 ‘checked예외’라고 부른다.
 
