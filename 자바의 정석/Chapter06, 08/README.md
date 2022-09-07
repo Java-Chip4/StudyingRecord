@@ -153,6 +153,49 @@ for (Index i : array)
    
 3. **1번 코드는 디버깅을 훨씬 어렵게 합니다.** 위 반복문 안에 버그가 있다면 흐름 제어에 쓰인 catch문이 버그를 숨겨 디버깅을 훨씬 어렵게 할 것입니다. 만약 move() 메서드가 내부적으로 제 3의 배열을 사용하다가 `ArraylndexOutOfBoundsException`을 일으킨다면 어떻게 될까요? **2번 코드의 move()라면 이 버그는 catch문에 잡히지 않고 끝까지 올라가서 프로그램을 종료시킬 것입니다. 함수 호출 스택을 보고 즉시 어디에서 버그가 났는지 알 수 있겠죠. 그러나 1번에서는 버그 때문에 발생한 예외를 정상적인 프로그램 실행 흐름으로 오해하고 그냥 넘어갑니다.** 이런 경우에 대한 디버깅은 훨씬 어렵습니다.
 
-- 컴파일러가 예외처리를 확인하지 않는 RuntimeException클래스들은 ‘unchecked예외’ 라고 부르고, 예외처리를 확인하는 Exception클래스들은 ‘checked예외’라고 부른다.
+# RuntimeException과 RE가 아닌 예외들의 차이점
+# Throwable 계층 구조
+
+Exception은 Runtime계열이든 아니든 Throwable을 상속 받고 있습니다. 예외에 대해 알아보기 전에 Throwable의 계층 구조를 살펴보겠습니다.
+![image](https://user-images.githubusercontent.com/76809524/188663636-bb60e0b3-2786-401d-a219-a49947db77e6.png)
+(출처: https://madplay.github.io/post/java-checked-unchecked-exceptions)
+
+ Throwable 클래스는 Exception과 Error 클래스의 부모입니다. 자바에서 예외나 오류를 Throw할 수 있는 이유는 이들이 Throwable 클래스를 상속 받고 있기 때문입니다.  
+## Throwable 자식들의 3분류
+자바에서는 Throwable의 자식 클래스를 크게 3분류로 나누어보는 것이 일반적입니다. Error계열, Exception계열, RuntimeException 계열입니다. RuntimeException은 Exception을 상속 받았기 때문에 Exception과 비슷한 것이라고 생각할 수도 있습니다. 물론 비슷한 점도 있으나 RuntimeException은 자신의 부모 클래스인 Exception과 달리 Unchecked Exception이라는 결정적인 차이점이 있습니다. 따라서 RE와 RE가 아닌 예외를 나누어서 생각하는 것이 일반적입니다.
+
+## 각 분류의 특징
+(일반적인 범주를 말하는 것이며 예외적인 클래스도 많음. 예를 들어 Exception 클래스를 상속 받았지만 예외 처리를 할 수 없는 문제도 있다.)
+1. **Error 클래스를 상속 받은 분류** : 실행을 계속할 수 없을 정도의 심각한 오류가 일어났음을 알립니다. (ex. 하드웨어, JVM 오류 등)
+2. **Exception 클래스를 상속** : 미리 예외 처리가 가능한 문제. 예외 처리를 함으로서 문제 상황을 수복할 수 있는 예외를 일으킵니다. - 컴파일러 수준에서 예외 처리가 강제된다는 특징이 있습니다. 예외의 가능성이 있는데 catch하거나 throws 문을 작성하지 않았을 경우 컴파일 오류를 줍니다. 
+3. **RunTime Exception 클래스를 상속** : 예외 처리 보다는 코드 수정으로 고쳐야 하는 문제 or 코드 수정으로도 고칠 수 없어 프로그램을 종료시켜야 하는 문제 등이 일어났을 때 예외를 일으킵니다.
+
+위 분류 중 Exception과 RunTimeException의 용도가 달라진 이유는 Exception 계열은 Checked Exception이며 RunTimeException 계열은 Unchecked Exception이기 때문입니다.  
+다시 말하지만 일반적인 특징 및 용도를 나타낸 것일 뿐 기본 계공되는 예외들이 무조건 위 설명을 따르는 것은 아닙니다. 커스텀 예외를 만들어서 사용할 때도 예외 처리를 강제하고 싶은 예외일지라도 RunTimeException을 상속 받도록 만들 수도 있습니다. 
+
+## RuntimeException, Exception 차이점
+RE와 RE가 아닌 예외의 차이점은 예외처리를 제대로 하고 있는지 컴파일러가 체크해주는지 여부에 있습니다.  
+### RE인 예외 == UnChecked 예외
+RE의 경우 예외를 발생시키기만 하고 처리해주지 않아도 컴파일러가 오류를 내지 않습니다.  
+
+(컴파일러가 오류 체크하지 않는 모습)
+![image](https://user-images.githubusercontent.com/76809524/188786832-db5c05f7-07e5-4134-ac94-dcbf449d7e77.png)  
+
+(실행 후 런타임 오류로 잡아야 함)
+![image](https://user-images.githubusercontent.com/76809524/188786841-f888132b-757a-4179-8fb3-ae0ccdc8d4e0.png)  
+
+
+### RE가 아닌 예외 == Checked 예외
+반면 RE가 아닌 예외의 경우 예외를 발생 시키기만하고 catch를 하거나 이전 함수로 throws하지 않으면 컴파일 오류를 줍니다.  
+
+(처리되지 않은 예외로 인한 컴파일 오류 발생)
+![image](https://user-images.githubusercontent.com/76809524/188786500-ba6036e7-0330-4d93-b645-f891af0ef89d.png)  
+
+(컴파일 오류를 해결하기 위해서 catch해주거나)
+![image](https://user-images.githubusercontent.com/76809524/188786642-57fbaf34-cbe7-41e4-ab3c-40f5bb0305a0.png)  
+
+(이전 함수로 throws 해줄 것)
+![image](https://user-images.githubusercontent.com/76809524/188786646-71d2ca2b-5724-448a-9065-655c1b0465b7.png)  
+
 
 
