@@ -49,8 +49,10 @@ Collection Framework를 잘 아는 것도 중요하지만, 더 중요한 것은 
 https://www.cs.cmu.edu/~mrmiller/15-121/Slides/09-BigO-ArrayList.pdf  
 https://www.baeldung.com/java-collections-complexity
 
-## PriorityQueue, Deque
-- PriorityQueue
+## Queue
+- Queue에는 `poll()`과 `remove()`가 있다. 언제 뭘 선택해야 할까❓
+  - 
+### PriorityQueue
   - Queue 인터페이스의 구현체로, 저장한 순서에 상관없이 priority가 높은 순서부터 꺼내게 된다.
   - priority에 따른 순서 구현을 위해 Min-Heap을 구현한 형태이다.
   - null 저장시 NPE이 발생한다.
@@ -71,7 +73,7 @@ https://www.baeldung.com/java-collections-complexity
       PriorityQueue<Integer> queue = new PriorityQueue<>(10, Collections.reverseOrder());
       ```   
 
-- Deque
+### Deque
   - Queue의 변형으로, 양 끝에서 추가 / 삭제가 가능한 구조이다.
   - 이런 구조를 언제 사용할 수 있을까❓
     - [영화관 티켓 구매 라인](https://stackoverflow.com/questions/3880254/why-do-we-need-deque-data-structures-in-the-real-world) 
@@ -128,3 +130,4 @@ transient Node<K,V>[] table;
 
 - HashMap의 동작에 대해 다룬 Naver D2 article
   - https://d2.naver.com/helloworld/831311
+
