@@ -12,6 +12,10 @@
 - ❗️주의 : Vector, Hashtable은 하위 호환성을 위해 남겨진 클래스이므로, 대신 ArrayList, HashMap을 사용하자
   - Github Issue : [레거시 컬렉션 프레임워크인 Vector, Hashtable을 왜 쓰면 안될까?](https://github.com/Java-Chip4/StudyingRecord/issues/33)
 
+## 컬렉션 프레임워크 메서드의 시간 복잡도
+![image](https://user-images.githubusercontent.com/76809524/191466981-249408a4-b6d6-4a0d-8a3a-53ae8089a156.png)
+
+
 
 ## ArrayList
 - ArrayList를 생성할 때, 실제 저장할 개수보다 약간 여유롭게 설정하자
@@ -21,33 +25,41 @@
     - Answer : `private static final int DEFAULT_CAPACITY = 10;`
   - 사이즈는 동적으로 얼마나 커지는가❓
     - 50%씩 증가한다.
-    - Ex : 기본값이라면, 10 -> 15 -> 22 -> 33 ... 
+    - Ex : 기본값이라면, 10 -> 15 -> 22 -> 33 ...
   - 어떻게 사이즈가 증가하게 되는가❓
     1. `ensureCapacity()` 가 호출이 되고, 이는 다시 `grow()`를 호출한다.
     2. `grow()`는 새로운 크기의 새로운 array를 생성한다.
-       - 그 이유는 ArrayList가 data를 `transient Object[] elementData;`로 저장하기 때문이다.
+    - 그 이유는 ArrayList가 data를 `transient Object[] elementData;`로 저장하기 때문이다.
     3. 새롭게 생성한 array를 기존의 array로 붙여넣는다.
     4. 새로운 array를 return 한다.
-    
+
 
 ## ArrayList vs LinkedList
 Collection Framework를 잘 아는 것도 중요하지만, 더 중요한 것은 나의 데이터를 어떤 collection에 담은 것인지를 결정할 수 있는 것이 더 중요하다고 생각된다.
 
-만약, 나의 데이터가 삽입, 삭제와 같은 수정보다는 **조회**가 더 자주 이뤄지는 데이터라면, ArrayList를 사용하는 것이 옳다.  
-- ArrayList의 remove()에 대한 time complexity : **O(N)**  
-- ArrayList의 get()에 대한 time complexity : **O(1)**  
-  
+만약, 나의 데이터가 삽입, 삭제와 같은 수정보다는 **조회**가 더 자주 이뤄지는 데이터라면, ArrayList를 사용하는 것이 옳다.
+- ArrayList의 remove()에 대한 time complexity : **O(N)**
+- ArrayList의 get()에 대한 time complexity : **O(1)**
+
 이기 때문이다.
 
 
 반대로, 수정이 더 자주 이뤄지는 데이터라면, LinkedList를 사용해야 한다.
 - LinkedList의 remove()에 대한 time complexity : **O(1)**
-- LinkedList의 get()에 대한 time complexity : **O(N)**  
-
+- LinkedList의 get()에 대한 time complexity : **O(N)**
 
 참고  
 https://www.cs.cmu.edu/~mrmiller/15-121/Slides/09-BigO-ArrayList.pdf  
 https://www.baeldung.com/java-collections-complexity
+
+## ArrayList vs LinkedList 시간 복잡도 차이가 나는 이유
+![image](https://user-images.githubusercontent.com/76809524/191474630-1789a2d2-387c-43cb-89a9-96419798847a.png)
+(Linked List 첫 번째 변수에 null들어간건 실수입니다ㅜㅜ head포인터의 주소가 들어가 있어야합니다.)
+
+[ArrayList] 와 [LinkedList]는 둘 다 List인터페이스를 구현하고 있습니다. 그로 인해 사용시에는 매우 비슷한 컬렉션으로 보입니다. 그러나 데이터를 삽입, 삭제할 때의 시간 복잡도는 O(n)대 O(1)로 굉장히 큰 차이가 납니다.  
+이는 두 컬렉션 클래스의 내부구현이 다르기 때문입니다. ArrayList는 배열과 비슷하게 모든 데이터를 메모리 블럭 한 공간에 저장합니다. 반면 LinkedList는 모든 데이터가 분산 되어있고 하나의 데이터가 다음 데이터의 주소를 참조하는 식으로 구현되어있습니다. 때문에 삽입, 삭제시에 메모리 블럭 공간을 늘리거나, 다른 데이터를 한 칸씩 뒤로 밀고 당기는 연산을 할 필요가 없습니다. 데이터들이 참조하는 주소만 조금씩 바꾸어 주면 됩니다.
+
+(참고하면 좋을 블로그 : https://www.nextree.co.kr/p6506/)
 
 ## Queue
 - Queue에는 `poll()`과 `remove()`가 있다. 언제 뭘 선택해야 할까❓
