@@ -16,13 +16,13 @@
 
 
 ## 정리 폴더
-- [진행중] [자바의 정석 - 남궁성](https://github.com/Java-Chip4/StudyingRecord/tree/main/자바의%20정석)
+- [완료] [자바의 정석 - 남궁성](https://github.com/Java-Chip4/StudyingRecord/tree/main/자바의%20정석)
+- [진행중] [이펙티브 자바 3판 - 조슈아 블로크](https://github.com/Java-Chip4/StudyingRecord/tree/main/이펙티브%20자바%203판)
 - [진행중] [스프링 강의 시리즈 - 김영한](https://github.com/Java-Chip4/StudyingRecord/tree/main/김영한님%20스프링)
     - [완료] [01 스프링 핵심 원리 - 기본편](https://github.com/Java-Chip4/StudyingRecord/tree/main/%EA%B9%80%EC%98%81%ED%95%9C%EB%8B%98%20%EC%8A%A4%ED%94%84%EB%A7%81/01%20%EC%8A%A4%ED%94%84%EB%A7%81%20%ED%95%B5%EC%8B%AC%20%EC%9B%90%EB%A6%AC%20-%20%EA%B8%B0%EB%B3%B8%ED%8E%B8)
     - [완료] [02 모든 개발자를 위한 HTTP 웹 기본 지식](https://github.com/Java-Chip4/StudyingRecord/tree/main/%EA%B9%80%EC%98%81%ED%95%9C%EB%8B%98%20%EC%8A%A4%ED%94%84%EB%A7%81/02%20%EB%AA%A8%EB%93%A0%20%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%A5%BC%20%EC%9C%84%ED%95%9C%20HTTP%20%EC%9B%B9%20%EA%B8%B0%EB%B3%B8%20%EC%A7%80%EC%8B%9D)
     - [완료] [03 실전 스프링 부트와 JPA 활용1 - 웹 애플리케이션 개발](https://github.com/Java-Chip4/StudyingRecord/tree/main/%EA%B9%80%EC%98%81%ED%95%9C%EB%8B%98%20%EC%8A%A4%ED%94%84%EB%A7%81/03%20%EC%8B%A4%EC%A0%84%20%EC%8A%A4%ED%94%84%EB%A7%81%20%EB%B6%80%ED%8A%B8%EC%99%80%20JPA%20%ED%99%9C%EC%9A%A91%20-%20%EC%9B%B9%20%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98%20%EA%B0%9C%EB%B0%9C)
     - [진행중] [04 스프링 MVC 1편 - 백엔드 웹 개발 핵심 기술](https://github.com/Java-Chip4/StudyingRecord/tree/main/%EA%B9%80%EC%98%81%ED%95%9C%EB%8B%98%20%EC%8A%A4%ED%94%84%EB%A7%81/04%20%EC%8A%A4%ED%94%84%EB%A7%81%20MVC%201%ED%8E%B8%20-%20%EB%B0%B1%EC%97%94%EB%93%9C%20%EC%9B%B9%20%EA%B0%9C%EB%B0%9C%20%ED%95%B5%EC%8B%AC%20%EA%B8%B0%EC%88%A0)
-- [진행중] [이펙티브 자바 3판 - 조슈아 블로크](https://github.com/Java-Chip4/StudyingRecord/tree/main/이펙티브%20자바%203판)
 
 
 ## 이슈로 질문 남기기
@@ -65,32 +65,24 @@
         - 섹션 4. MVC 프레임워크 만들기
 - [**10/10 (월) 21:00 세션 리더 - 김소연**](https://github.com/Java-Chip4/StudyingRecord/tree/main/%EA%B9%80%EC%98%81%ED%95%9C%EB%8B%98%20%EC%8A%A4%ED%94%84%EB%A7%81/04%20%EC%8A%A4%ED%94%84%EB%A7%81%20MVC%201%ED%8E%B8%20-%20%EB%B0%B1%EC%97%94%EB%93%9C%20%EC%9B%B9%20%EA%B0%9C%EB%B0%9C%20%ED%95%B5%EC%8B%AC%20%EA%B8%B0%EC%88%A0/%EC%84%B9%EC%85%98%205)
     - 스프링 MVC 1편 - 백엔드 웹 개발 핵심 기술
-        - 섹션 5. 섹션 5. 스프링 MVC - 구조 이해
-        
+        - 섹션 5. 스프링 MVC - 구조 이해
+- [**10/31 (월) 21:30 세션 리더 - 강승원**](https://github.com/Java-Chip4/StudyingRecord/tree/main/%EA%B9%80%EC%98%81%ED%95%9C%EB%8B%98%20%EC%8A%A4%ED%94%84%EB%A7%81/04%20%EC%8A%A4%ED%94%84%EB%A7%81%20MVC%201%ED%8E%B8%20-%20%EB%B0%B1%EC%97%94%EB%93%9C%20%EC%9B%B9%20%EA%B0%9C%EB%B0%9C%20%ED%95%B5%EC%8B%AC%20%EA%B8%B0%EC%88%A0/%EC%84%B9%EC%85%98%205)
+    - 스프링 MVC 1편 - 백엔드 웹 개발 핵심 기술
+        - 섹션 6. 스프링 MVC - 기본 기능 
+          - ~ HTTP 요청 파라미터 - @ModelAttribute
 
 ---
 
-## Java 계획
-- [**8/3 (수) 21:00 세션**](https://github.com/Java-Chip4/StudyingRecord/tree/main/%EC%9E%90%EB%B0%94%EC%9D%98%20%EC%A0%95%EC%84%9D/Chapter01~05)
-    - Chapter 1 자바를 시작하기 전에
-    - Chapter 2 변수(Variable)
-    - Chapter 3 연산자(Operator)
-    - Chapter 4 조건문과 반복문
-    - Chapter 5 배열(Array)
-- [**8/24 (수) 21:00 세션**](https://github.com/Java-Chip4/StudyingRecord/tree/main/%EC%9E%90%EB%B0%94%EC%9D%98%20%EC%A0%95%EC%84%9D/Chapter06%2C%2008)
-    - _Chapter 6 객체지향 프로그래밍 I_
-    - Chapter 8 예외처리(Exception Handling)
-- [**9/7 (수) 21:00 세션**](https://github.com/Java-Chip4/StudyingRecord/tree/main/%EC%9E%90%EB%B0%94%EC%9D%98%20%EC%A0%95%EC%84%9D/Chapter07%2C%2009)
-    - _Chapter 7 객체지향 프로그래밍 II_
-    - Chapter 9 java.lang패키지와 유용한 클래스
-- [**9/14 (수) 21:00 세션**](https://github.com/Java-Chip4/StudyingRecord/tree/main/%EC%9E%90%EB%B0%94%EC%9D%98%20%EC%A0%95%EC%84%9D/Chapter10%2C%2012)
-    - _Chapter 12 지네릭스, 열거형, 애너테이션_
-    - Chapter 10 날짜와 시간 & 형식화
-- [**9/21 (수) 21:00 세션**](https://github.com/Java-Chip4/StudyingRecord/tree/main/%EC%9E%90%EB%B0%94%EC%9D%98%20%EC%A0%95%EC%84%9D/Chapter11%2C%2015)
-    - _Chapter 11 컬렉션 프레임웍_
-    - Chapter 15 입출력(I/O)
-- [**10/5 (수) 21:00 세션**](https://github.com/Java-Chip4/StudyingRecord/tree/main/%EC%9E%90%EB%B0%94%EC%9D%98%20%EC%A0%95%EC%84%9D/Chapter13)
-    - Chapter 13 쓰레드(Thread)
-- [**10/12 (수) 21:00 세션**](https://github.com/Java-Chip4/StudyingRecord/tree/main/%EC%9E%90%EB%B0%94%EC%9D%98%20%EC%A0%95%EC%84%9D/Chapter15%2C%2016)
-    - _Chapter 14 람다와 스트림_
-    - Chapter 16 네트워킹(Networking)
+## Effective Java 계획
+- **10/31 (월) 20:00 세션**
+  - [ITEM 1. 생성자 대신 정적 팩터리 메서드를 고려하라](https://github.com/Java-Chip4/StudyingRecord/tree/main/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EC%9E%90%EB%B0%94%203%ED%8C%90/2%EC%9E%A5%20-%20%EA%B0%9D%EC%B2%B4%20%EC%83%9D%EC%84%B1%EA%B3%BC%20%ED%8C%8C%EA%B4%B4/ITEM%201.md)
+  - [ITEM 2. 생성자에 매개변수가 많다면 빌더를 고려하라](https://github.com/Java-Chip4/StudyingRecord/tree/main/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EC%9E%90%EB%B0%94%203%ED%8C%90/2%EC%9E%A5%20-%20%EA%B0%9D%EC%B2%B4%20%EC%83%9D%EC%84%B1%EA%B3%BC%20%ED%8C%8C%EA%B4%B4/ITEM%202.md)
+  - [ITEM 3. private 생성자나 열거 타입으로 싱글턴임을 보증하라](https://github.com/Java-Chip4/StudyingRecord/tree/main/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EC%9E%90%EB%B0%94%203%ED%8C%90/2%EC%9E%A5%20-%20%EA%B0%9D%EC%B2%B4%20%EC%83%9D%EC%84%B1%EA%B3%BC%20%ED%8C%8C%EA%B4%B4/ITEM%203.md)
+  - [ITEM 4. 인스턴스화를 막으려거든 private 생성자를 사용하라](https://github.com/Java-Chip4/StudyingRecord/tree/main/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EC%9E%90%EB%B0%94%203%ED%8C%90/2%EC%9E%A5%20-%20%EA%B0%9D%EC%B2%B4%20%EC%83%9D%EC%84%B1%EA%B3%BC%20%ED%8C%8C%EA%B4%B4/ITEM%204.md)
+  - [ITEM 5. 자원을 직접 명시하지 말고 의존 객체 주입을 사용하라](https://github.com/Java-Chip4/StudyingRecord/tree/main/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EC%9E%90%EB%B0%94%203%ED%8C%90/2%EC%9E%A5%20-%20%EA%B0%9D%EC%B2%B4%20%EC%83%9D%EC%84%B1%EA%B3%BC%20%ED%8C%8C%EA%B4%B4/ITEM%205.md)
+  - [ITEM 6. 불필요한 객체 생성을 피하라](https://github.com/Java-Chip4/StudyingRecord/tree/main/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EC%9E%90%EB%B0%94%203%ED%8C%90/2%EC%9E%A5%20-%20%EA%B0%9D%EC%B2%B4%20%EC%83%9D%EC%84%B1%EA%B3%BC%20%ED%8C%8C%EA%B4%B4/ITEM%206.md)
+
+
+---
+## 완독
+### [자바의 정석](https://github.com/Java-Chip4/StudyingRecord/tree/main/%EC%8A%A4%ED%84%B0%EB%94%94%20%EC%9D%BC%EC%A0%95/%EC%9E%90%EB%B0%94%EC%9D%98%20%EC%A0%95%EC%84%9D.md)
