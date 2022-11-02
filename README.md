@@ -73,7 +73,11 @@
     - 스프링 MVC 1편 - 백엔드 웹 개발 핵심 기술
         - 섹션 6. 스프링 MVC - 기본 기능 
           - ~ HTTP 요청 파라미터 - @ModelAttribute
-
+- [**11/9 (수) 21:30 세션 리더 - 송경석**](https://github.com/Java-Chip4/StudyingRecord/tree/main/%EA%B9%80%EC%98%81%ED%95%9C%EB%8B%98%20%EC%8A%A4%ED%94%84%EB%A7%81/04%20%EC%8A%A4%ED%94%84%EB%A7%81%20MVC%201%ED%8E%B8%20-%20%EB%B0%B1%EC%97%94%EB%93%9C%20%EC%9B%B9%20%EA%B0%9C%EB%B0%9C%20%ED%95%B5%EC%8B%AC%20%EA%B8%B0%EC%88%A0/%EC%84%B9%EC%85%98%205)
+    - 스프링 MVC 1편 - 백엔드 웹 개발 핵심 기술
+        - 섹션 6. 스프링 MVC - 기본 기능
+        - 섹션 7. 스프링 MVC - 웹 페이지 만들기
+          - ~ 상품 상세
 ---
 
 ## Effective Java 계획
@@ -83,8 +87,13 @@
   - [ITEM 3. private 생성자나 열거 타입으로 싱글턴임을 보증하라](https://github.com/Java-Chip4/StudyingRecord/tree/main/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EC%9E%90%EB%B0%94%203%ED%8C%90/2%EC%9E%A5%20-%20%EA%B0%9D%EC%B2%B4%20%EC%83%9D%EC%84%B1%EA%B3%BC%20%ED%8C%8C%EA%B4%B4/ITEM%203.md)
   - [ITEM 4. 인스턴스화를 막으려거든 private 생성자를 사용하라](https://github.com/Java-Chip4/StudyingRecord/tree/main/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EC%9E%90%EB%B0%94%203%ED%8C%90/2%EC%9E%A5%20-%20%EA%B0%9D%EC%B2%B4%20%EC%83%9D%EC%84%B1%EA%B3%BC%20%ED%8C%8C%EA%B4%B4/ITEM%204.md)
   - [ITEM 5. 자원을 직접 명시하지 말고 의존 객체 주입을 사용하라](https://github.com/Java-Chip4/StudyingRecord/tree/main/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EC%9E%90%EB%B0%94%203%ED%8C%90/2%EC%9E%A5%20-%20%EA%B0%9D%EC%B2%B4%20%EC%83%9D%EC%84%B1%EA%B3%BC%20%ED%8C%8C%EA%B4%B4/ITEM%205.md)
-  - [ITEM 6. 불필요한 객체 생성을 피하라](https://github.com/Java-Chip4/StudyingRecord/tree/main/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EC%9E%90%EB%B0%94%203%ED%8C%90/2%EC%9E%A5%20-%20%EA%B0%9D%EC%B2%B4%20%EC%83%9D%EC%84%B1%EA%B3%BC%20%ED%8C%8C%EA%B4%B4/ITEM%206.md)
 
+- **11/9 (수) 20:00 세션**
+  - [ITEM 6. 불필요한 객체 생성을 피하라](https://github.com/Java-Chip4/StudyingRecord/tree/main/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EC%9E%90%EB%B0%94%203%ED%8C%90/2%EC%9E%A5%20-%20%EA%B0%9D%EC%B2%B4%20%EC%83%9D%EC%84%B1%EA%B3%BC%20%ED%8C%8C%EA%B4%B4/ITEM%206.md)
+  - [ITEM 7. 다 쓴 객체 참조를 해제하라](https://github.com/Java-Chip4/StudyingRecord/tree/main/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EC%9E%90%EB%B0%94%203%ED%8C%90/2%EC%9E%A5%20-%20%EA%B0%9D%EC%B2%B4%20%EC%83%9D%EC%84%B1%EA%B3%BC%20%ED%8C%8C%EA%B4%B4/ITEM%207.md)
+  - [ITEM 8. finalizer와 cleaner 사용을 피하라](https://github.com/Java-Chip4/StudyingRecord/tree/main/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EC%9E%90%EB%B0%94%203%ED%8C%90/2%EC%9E%A5%20-%20%EA%B0%9D%EC%B2%B4%20%EC%83%9D%EC%84%B1%EA%B3%BC%20%ED%8C%8C%EA%B4%B4/ITEM%208.md)
+  - [ITEM 9. try-finally 보다는 try-with-resource를 사용하라](https://github.com/Java-Chip4/StudyingRecord/tree/main/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EC%9E%90%EB%B0%94%203%ED%8C%90/2%EC%9E%A5%20-%20%EA%B0%9D%EC%B2%B4%20%EC%83%9D%EC%84%B1%EA%B3%BC%20%ED%8C%8C%EA%B4%B4/ITEM%209.md)
+  - [ITEM 10. equals는 일반 규약을 지켜 재정의하라](https://github.com/Java-Chip4/StudyingRecord/tree/main/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EC%9E%90%EB%B0%94%203%ED%8C%90/2%EC%9E%A5%20-%20%EA%B0%9D%EC%B2%B4%20%EC%83%9D%EC%84%B1%EA%B3%BC%20%ED%8C%8C%EA%B4%B4/ITEM%2010.md)
 
 ---
 ## 완독
