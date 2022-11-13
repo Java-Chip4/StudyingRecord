@@ -37,12 +37,139 @@
 ### 추이성
 
 첫 번째 객체와 두 번째 객체가 같고, 두 번째 객체와 세 번째 객체가 같다면 첫 번째 객체와 세 번째 객체는 같아야 한다.
+#### LSP 리스코프 치환 원칙 (Liskov substitution principle)
+
+#### 2차원에서 점을 표현하는 클래스
+```java
+public class Point {
+    private final int x;
+    private final int y;
+
+    public Point(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof Point))
+            return false;
+        Point p = (Point) o;
+        return p.x = x && p.y = y;
+    }
+// 나머지 코드는 생략
+}
+```
+
+#### 색상이 추가된 Point 클래스 확장
+```java
+public class ColorPoint extends Point {
+    private final Color color;
+
+    public ColorPoint(int x, int y, Color color) {
+        super(x, y);
+        this.color = color;
+    }
+// 나머지 코드는 생략
+}
+```
+
+#### 대칭성을 위배한 equals 메서드
+```java
+@Override
+public boolean equals(Object o) {
+    if (!(o instanceof ColorPoint)) return false;
+    return super.equals(o) && ((ColorPoint) o).color = color;
+}
+```
+- Point의  equals는 색상을 무시하고 ColorPoint의 equals는 매개변수의 클래스 종류가 다르기 때문에 항상 false를 반환함
+```java
+Point p = new Point(1, 2);
+ColorPoint cp = new ColorPoint(1, 2, Color.RED);
+```
+- p.equals(cp)는 true를 반환하지만 cp.equals(p)는 false를 반환함
+
+#### 추이성을 위배한 equals 메서드
+```java
+@Override
+public boolean equals(Object o) {
+    if (!(o instanceof Point)) return false;
+
+    // o가 일반 Point면 색상을 무시하고 비교
+    if (!(o instanceof ColorPoint)) return o.equals(this);
+
+    // o가 ColorPoint면 색상까지 비교
+    return super.equals(o) && ((ColorPoint) o).color = color;
+}
+```
+- 위 코드는 대칭성은 지켜주지만 추이성을 깨버림
+```java
+ColorPoint pl = new ColorPoint(1, 2, Color.RED);
+Point p2 = new Point(1, 2);
+ColorPoint p3 = new ColorPoint(1, 2, Color.BLUE);
+```
+- pl.equals(p2)는 true를 반환하고 p2.equals(p3)는 true를 반환하지만 pl.equals(p3)는 false를 반환함
+- 재귀에 빠질 위험도 있음  
+
+💡 **구체 클래스를 확장해 새로운 값을 추가하면서 equals 규약을 만족시킬 방법은 존재하지 않는다**
+
+#### 리스코프 치환 원칙 위배
+```java
+@Override 
+public boolean equals(Object o) {
+  if (o = null 11 o.getClass() != getClassO) 
+      return false;
+  Point p = (Point) o;
+  return p.x = x && p.y = y; 
+}
+```
+
+Point의 하위 클래스는 정의상 여전히 Point이므로 어디서든 Point로 활용되어야 하는데 그러지 못하다.
+
+#### equals 규약을 지키면서 값 추가
+```java
+public class ColorPoint {
+    private final Point point;
+    private final Color color;
+
+    public ColorPoint(int x, int yf Color color) {
+        point = new Point(x, y);
+        this.color = Objects.requireNonNulKcolor);
+    }
+
+    /**
+     * 이 ColorPoint의 Point 뷰를 반환한다.
+     */
+    public Point asPoint() {
+        return point;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof ColorPoint)) return false;
+        ColorPoint cp = (ColorPoint) o;
+        return cp.point.equals(point) && cp.color.equals(color);
+    }
+// 나머지 코드는 생략 
+}
+```
+
+#### 정리
+- 프로그램의 객체는 프로그램의 정확성을 깨뜨리지 않으면서 하위 타입의 인스턴스로 바꿀
+  수 있어야 한다
+- 다형성에서 하위 클래스는 **인터페이스 규약을 다 지켜야 한다는 것**, 다형성을 지원하기 위
+  한 원칙, 인터페이스를 구현한 구현체는 믿고 사용하려면, 이 원칙이 필요하다.
+- 상속을 사용하면 추이성을 만족하지 못하는 경우가 발생할 수 있다. 따라서 
+  - 추이성을 해결 하기 위해 상속이 아니라 컴포지션 관계를 이용하는 방법이 있다.
+
+
 
 ### 일관성
 
 두 객체가 같고 수정되지 않았더라면 영원히 같아야 한다.
 
 항시 메모리에 존재하는 객체만을 사용한 결정적 계싼만 수행해야 한다.
+
 
 ### null 아님
 
