@@ -81,6 +81,11 @@
 - **11/23 (수) 21:30 세션 리더 - 이현호**
     - 스프링 MVC 1편 - 백엔드 웹 개발 핵심 기술
         - 섹션 7. 스프링 MVC - 웹 페이지 만들기
+- **12/18 (일) 21:00 세션 리더 - 평주영**
+  - 자바 ORM 표준 JPA 프로그래밍 - 기본편
+    - 섹션 1. JPA 소개
+    - 섹션 2. JPA 소개
+    - 섹션 3. 영속성 관리 - 내부 동작 방식
 ---
 
 ## Effective Java 계획
@@ -100,11 +105,16 @@
   
 - **11/23 (수) 20:00 세션**
   - [ITEM 11. equals를 재정의하려거든 hashCode도 재정의하라](https://github.com/Java-Chip4/StudyingRecord/tree/main/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EC%9E%90%EB%B0%94%203%ED%8C%90/2%EC%9E%A5%20-%20%EA%B0%9D%EC%B2%B4%20%EC%83%9D%EC%84%B1%EA%B3%BC%20%ED%8C%8C%EA%B4%B4/ITEM%2011.md)
-  - [ITEM 12. toString을 항상 재정의하라](https://github.com/Java-Chip4/StudyingRecord/tree/main/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EC%9E%90%EB%B0%94%203%ED%8C%90/2%EC%9E%A5%20-%20%EA%B0%9D%EC%B2%B4%20%EC%83%9D%EC%84%B1%EA%B3%BC%20%ED%8C%8C%EA%B4%B4/ITEM%2012.md)
+  - [ITEM 12. toString을 항상 재정의하라](https://github.com/Java-Chip4/StudyingRecord/blob/main/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EC%9E%90%EB%B0%94%203%ED%8C%90/3%EC%9E%A5%20-%20%EB%AA%A8%EB%93%A0%20%EA%B0%9D%EC%B2%B4%EC%9D%98%20%EA%B3%B5%ED%86%B5%20%EB%A9%94%EC%84%9C%EB%93%9C/ITEM%2012.md)
   - [ITEM 13. clone 재정의는 주의해서 진행하라](https://github.com/Java-Chip4/StudyingRecord/tree/main/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EC%9E%90%EB%B0%94%203%ED%8C%90/2%EC%9E%A5%20-%20%EA%B0%9D%EC%B2%B4%20%EC%83%9D%EC%84%B1%EA%B3%BC%20%ED%8C%8C%EA%B4%B4/ITEM%2013.md)
   - [ITEM 14. Comparable을 구현할지 고려하라](https://github.com/Java-Chip4/StudyingRecord/tree/main/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EC%9E%90%EB%B0%94%203%ED%8C%90/2%EC%9E%A5%20-%20%EA%B0%9D%EC%B2%B4%20%EC%83%9D%EC%84%B1%EA%B3%BC%20%ED%8C%8C%EA%B4%B4/ITEM%2014.md)
-  - [ITEM 15. 클래스와 멤버의 접근 권한을 최소화하라](https://github.com/Java-Chip4/StudyingRecord/tree/main/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EC%9E%90%EB%B0%94%203%ED%8C%90/2%EC%9E%A5%20-%20%EA%B0%9D%EC%B2%B4%20%EC%83%9D%EC%84%B1%EA%B3%BC%20%ED%8C%8C%EA%B4%B4/ITEM%2015.md)
-
+  - [ITEM 15. 클래스와 멤버의 접근 권한을 최소화하라](https://github.com/Java-Chip4/StudyingRecord/blob/main/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EC%9E%90%EB%B0%94%203%ED%8C%90/4%EC%9E%A5%20-%20%ED%81%B4%EB%9E%98%EC%8A%A4%EC%99%80%20%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4/ITEM%2015.md)
+- **12/18 (일) 20:00 세션**
+  - [ITEM 16. public 클래스에서는 public 필드가 아닌 접근자 메서드를 사용하라](https://github.com/Java-Chip4/StudyingRecord/blob/main/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EC%9E%90%EB%B0%94%203%ED%8C%90/4%EC%9E%A5%20-%20%ED%81%B4%EB%9E%98%EC%8A%A4%EC%99%80%20%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4/ITEM%2016.md)
+  - [ITEM 17. 변경 가능성을 최소화하라](https://github.com/Java-Chip4/StudyingRecord/blob/main/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EC%9E%90%EB%B0%94%203%ED%8C%90/4%EC%9E%A5%20-%20%ED%81%B4%EB%9E%98%EC%8A%A4%EC%99%80%20%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4/ITEM%2017.md)
+  - [ITEM 18. 상속보다는 컴포지션을 사용하라](https://github.com/Java-Chip4/StudyingRecord/blob/main/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EC%9E%90%EB%B0%94%203%ED%8C%90/4%EC%9E%A5%20-%20%ED%81%B4%EB%9E%98%EC%8A%A4%EC%99%80%20%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4/ITEM%2018.md)
+  - [ITEM 19. 상속응 고려해 설계하고 문서화하라. 그러지 않았다면 상속을 금지하라](https://github.com/Java-Chip4/StudyingRecord/blob/main/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EC%9E%90%EB%B0%94%203%ED%8C%90/4%EC%9E%A5%20-%20%ED%81%B4%EB%9E%98%EC%8A%A4%EC%99%80%20%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4/ITEM%2019.md)
+  - [ITEM 20. 추상 클래스보다는 인터페이스를 우선하라](https://github.com/Java-Chip4/StudyingRecord/blob/main/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EC%9E%90%EB%B0%94%203%ED%8C%90/4%EC%9E%A5%20-%20%ED%81%B4%EB%9E%98%EC%8A%A4%EC%99%80%20%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4/ITEM%2020.md)
 ---
 ## 완독
 ### [자바의 정석](https://github.com/Java-Chip4/StudyingRecord/tree/main/%EC%8A%A4%ED%84%B0%EB%94%94%20%EC%9D%BC%EC%A0%95/%EC%9E%90%EB%B0%94%EC%9D%98%20%EC%A0%95%EC%84%9D.md)
