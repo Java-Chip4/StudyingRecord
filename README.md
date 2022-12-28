@@ -24,6 +24,7 @@
 ## 정리 폴더
 - [완료] [자바의 정석 - 남궁성](https://github.com/Java-Chip4/StudyingRecord/tree/main/자바의%20정석)
 - [진행중] [이펙티브 자바 3판 - 조슈아 블로크](https://github.com/Java-Chip4/StudyingRecord/tree/main/이펙티브%20자바%203판)
+- [진행중] 스프링 부트와 AWS로 혼자 구현하는 웹 서비스 - 이동욱
 - [진행중] [스프링 강의 시리즈 - 김영한](https://github.com/Java-Chip4/StudyingRecord/tree/main/김영한님%20스프링)
   - [완료] [01 스프링 핵심 원리 - 기본편](https://github.com/Java-Chip4/StudyingRecord/tree/main/%EA%B9%80%EC%98%81%ED%95%9C%EB%8B%98%20%EC%8A%A4%ED%94%84%EB%A7%81/01%20%EC%8A%A4%ED%94%84%EB%A7%81%20%ED%95%B5%EC%8B%AC%20%EC%9B%90%EB%A6%AC%20-%20%EA%B8%B0%EB%B3%B8%ED%8E%B8)
   - [완료] [02 모든 개발자를 위한 HTTP 웹 기본 지식](https://github.com/Java-Chip4/StudyingRecord/tree/main/%EA%B9%80%EC%98%81%ED%95%9C%EB%8B%98%20%EC%8A%A4%ED%94%84%EB%A7%81/02%20%EB%AA%A8%EB%93%A0%20%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%A5%BC%20%EC%9C%84%ED%95%9C%20HTTP%20%EC%9B%B9%20%EA%B8%B0%EB%B3%B8%20%EC%A7%80%EC%8B%9D)
@@ -82,11 +83,17 @@
 - [**11/23 (수) 21:30 세션 리더 - 이현호**](https://github.com/Java-Chip4/StudyingRecord/tree/main/%EA%B9%80%EC%98%81%ED%95%9C%EB%8B%98%20%EC%8A%A4%ED%94%84%EB%A7%81/04%20%EC%8A%A4%ED%94%84%EB%A7%81%20MVC%201%ED%8E%B8%20-%20%EB%B0%B1%EC%97%94%EB%93%9C%20%EC%9B%B9%20%EA%B0%9C%EB%B0%9C%20%ED%95%B5%EC%8B%AC%20%EA%B8%B0%EC%88%A0/%EC%84%B9%EC%85%98%207)
   - 스프링 MVC 1편 - 백엔드 웹 개발 핵심 기술
     - 섹션 7. 스프링 MVC - 웹 페이지 만들기
-- [**12/18 (일) 21:00 세션 리더 - 평주영**](https://github.com/Java-Chip4/StudyingRecord/tree/main/%EA%B9%80%EC%98%81%ED%95%9C%EB%8B%98%20%EC%8A%A4%ED%94%84%EB%A7%81/05%20%EC%9E%90%EB%B0%94%20ORM%20%ED%91%9C%EC%A4%80%20JPA%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20-%20%EA%B8%B0%EB%B3%B8%ED%8E%B8/%EC%84%B9%EC%85%98%201%20-%203)
+- [**12/22 (목) 21:00 세션 리더 - 평주영**](https://github.com/Java-Chip4/StudyingRecord/tree/main/%EA%B9%80%EC%98%81%ED%95%9C%EB%8B%98%20%EC%8A%A4%ED%94%84%EB%A7%81/05%20%EC%9E%90%EB%B0%94%20ORM%20%ED%91%9C%EC%A4%80%20JPA%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20-%20%EA%B8%B0%EB%B3%B8%ED%8E%B8/%EC%84%B9%EC%85%98%201%20-%203)
   - 자바 ORM 표준 JPA 프로그래밍 - 기본편
     - 섹션 1. JPA 소개
     - 섹션 2. JPA 소개
     - 섹션 3. 영속성 관리 - 내부 동작 방식
+- **1/4 (수) 21:00 세션**
+  - 스프링 부트와 AWS로 혼자 구현하는 웹 서비스
+    - 중간점검
+- **1/11 (수) 21:00 세션 리더 - 김소연**
+  - 스프링 부트와 AWS로 혼자 구현하는 웹 서비스
+    - 최종 점검 및 완독
 ---
 
 ## Effective Java 계획
@@ -110,12 +117,20 @@
   - [ITEM 13. clone 재정의는 주의해서 진행하라](https://github.com/Java-Chip4/StudyingRecord/tree/main/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EC%9E%90%EB%B0%94%203%ED%8C%90/2%EC%9E%A5%20-%20%EA%B0%9D%EC%B2%B4%20%EC%83%9D%EC%84%B1%EA%B3%BC%20%ED%8C%8C%EA%B4%B4/ITEM%2013.md)
   - [ITEM 14. Comparable을 구현할지 고려하라](https://github.com/Java-Chip4/StudyingRecord/tree/main/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EC%9E%90%EB%B0%94%203%ED%8C%90/2%EC%9E%A5%20-%20%EA%B0%9D%EC%B2%B4%20%EC%83%9D%EC%84%B1%EA%B3%BC%20%ED%8C%8C%EA%B4%B4/ITEM%2014.md)
   - [ITEM 15. 클래스와 멤버의 접근 권한을 최소화하라](https://github.com/Java-Chip4/StudyingRecord/blob/main/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EC%9E%90%EB%B0%94%203%ED%8C%90/4%EC%9E%A5%20-%20%ED%81%B4%EB%9E%98%EC%8A%A4%EC%99%80%20%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4/ITEM%2015.md)
-- **12/18 (일) 20:00 세션**
+
+- **12/22 (목) 20:00 세션**
   - [ITEM 16. public 클래스에서는 public 필드가 아닌 접근자 메서드를 사용하라](https://github.com/Java-Chip4/StudyingRecord/blob/main/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EC%9E%90%EB%B0%94%203%ED%8C%90/4%EC%9E%A5%20-%20%ED%81%B4%EB%9E%98%EC%8A%A4%EC%99%80%20%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4/ITEM%2016.md)
   - [ITEM 17. 변경 가능성을 최소화하라](https://github.com/Java-Chip4/StudyingRecord/blob/main/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EC%9E%90%EB%B0%94%203%ED%8C%90/4%EC%9E%A5%20-%20%ED%81%B4%EB%9E%98%EC%8A%A4%EC%99%80%20%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4/ITEM%2017.md)
   - [ITEM 18. 상속보다는 컴포지션을 사용하라](https://github.com/Java-Chip4/StudyingRecord/blob/main/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EC%9E%90%EB%B0%94%203%ED%8C%90/4%EC%9E%A5%20-%20%ED%81%B4%EB%9E%98%EC%8A%A4%EC%99%80%20%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4/ITEM%2018.md)
-  - [ITEM 19. 상속응 고려해 설계하고 문서화하라. 그러지 않았다면 상속을 금지하라](https://github.com/Java-Chip4/StudyingRecord/blob/main/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EC%9E%90%EB%B0%94%203%ED%8C%90/4%EC%9E%A5%20-%20%ED%81%B4%EB%9E%98%EC%8A%A4%EC%99%80%20%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4/ITEM%2019.md)
+  - [ITEM 19. 상속을 고려해 설계하고 문서화하라. 그러지 않았다면 상속을 금지하라](https://github.com/Java-Chip4/StudyingRecord/blob/main/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EC%9E%90%EB%B0%94%203%ED%8C%90/4%EC%9E%A5%20-%20%ED%81%B4%EB%9E%98%EC%8A%A4%EC%99%80%20%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4/ITEM%2019.md)
   - [ITEM 20. 추상 클래스보다는 인터페이스를 우선하라](https://github.com/Java-Chip4/StudyingRecord/blob/main/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EC%9E%90%EB%B0%94%203%ED%8C%90/4%EC%9E%A5%20-%20%ED%81%B4%EB%9E%98%EC%8A%A4%EC%99%80%20%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4/ITEM%2020.md)
+
+- **1/4 (수) 20:00 세션**
+  - [ITEM 21. 인터페이스는 구현하는 쪽을 생각해 설계하라](https://github.com/Java-Chip4/StudyingRecord/blob/main/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EC%9E%90%EB%B0%94%203%ED%8C%90/4%EC%9E%A5%20-%20%ED%81%B4%EB%9E%98%EC%8A%A4%EC%99%80%20%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4/ITEM%2021.md)
+  - [ITEM 22. 인터페이스는 타입을 정의하는 용도로만 사용하라](https://github.com/Java-Chip4/StudyingRecord/blob/main/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EC%9E%90%EB%B0%94%203%ED%8C%90/4%EC%9E%A5%20-%20%ED%81%B4%EB%9E%98%EC%8A%A4%EC%99%80%20%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4/ITEM%2022.md)
+  - [ITEM 23. 태그 달린 클래스보다는 클래스 계충구조를 활용하라](https://github.com/Java-Chip4/StudyingRecord/blob/main/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EC%9E%90%EB%B0%94%203%ED%8C%90/4%EC%9E%A5%20-%20%ED%81%B4%EB%9E%98%EC%8A%A4%EC%99%80%20%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4/ITEM%2023.md)
+  - [ITEM 24. 멤버 클래스는 되도록 staticm 만들라](https://github.com/Java-Chip4/StudyingRecord/blob/main/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EC%9E%90%EB%B0%94%203%ED%8C%90/4%EC%9E%A5%20-%20%ED%81%B4%EB%9E%98%EC%8A%A4%EC%99%80%20%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4/ITEM%2024.md)
+  - [ITEM 25. 톱레벨 클래스는 한 파일에 하나만 담으라](https://github.com/Java-Chip4/StudyingRecord/blob/main/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EC%9E%90%EB%B0%94%203%ED%8C%90/4%EC%9E%A5%20-%20%ED%81%B4%EB%9E%98%EC%8A%A4%EC%99%80%20%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4/ITEM%2025.md)
 ---
 ## 완독
 ### [자바의 정석](https://github.com/Java-Chip4/StudyingRecord/tree/main/%EC%8A%A4%ED%84%B0%EB%94%94%20%EC%9D%BC%EC%A0%95/%EC%9E%90%EB%B0%94%EC%9D%98%20%EC%A0%95%EC%84%9D.md)
