@@ -133,7 +133,7 @@
   - [ITEM 23. 태그 달린 클래스보다는 클래스 계충구조를 활용하라](https://github.com/Java-Chip4/StudyingRecord/blob/main/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EC%9E%90%EB%B0%94%203%ED%8C%90/4%EC%9E%A5%20-%20%ED%81%B4%EB%9E%98%EC%8A%A4%EC%99%80%20%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4/ITEM%2023.md)
   - [ITEM 24. 멤버 클래스는 되도록 staticm 만들라](https://github.com/Java-Chip4/StudyingRecord/blob/main/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EC%9E%90%EB%B0%94%203%ED%8C%90/4%EC%9E%A5%20-%20%ED%81%B4%EB%9E%98%EC%8A%A4%EC%99%80%20%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4/ITEM%2024.md)
   - [ITEM 25. 톱레벨 클래스는 한 파일에 하나만 담으라](https://github.com/Java-Chip4/StudyingRecord/blob/main/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EC%9E%90%EB%B0%94%203%ED%8C%90/4%EC%9E%A5%20-%20%ED%81%B4%EB%9E%98%EC%8A%A4%EC%99%80%20%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4/ITEM%2025.md)
-- **1/18 (수) 20:00 세션**
+- **2/1 (수) 20:00 세션**
   - ITEM 1 ~ ITEM 25 중간 점검 및 피드백
 ---
 ## 완독
