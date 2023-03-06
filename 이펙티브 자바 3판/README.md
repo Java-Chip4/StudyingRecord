@@ -1,4 +1,10 @@
-## Effective Java 계획
+# Effective Java 계획
+
+### 스터디원: 강승원, 김소연, 김찬진, 송경석, 이현호 
+### 매주 일요일 19:00까지 item 2개씩 읽고 질문 가져오기
+### 준비 제일 못한 사람 패널티 (해당 item 정리하기)
+
+
   - [ITEM 1. 생성자 대신 정적 팩터리 메서드를 고려하라](https://github.com/Java-Chip4/StudyingRecord/tree/main/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EC%9E%90%EB%B0%94%203%ED%8C%90/2%EC%9E%A5%20-%20%EA%B0%9D%EC%B2%B4%20%EC%83%9D%EC%84%B1%EA%B3%BC%20%ED%8C%8C%EA%B4%B4/ITEM%201.md)
   - [ITEM 2. 생성자에 매개변수가 많다면 빌더를 고려하라](https://github.com/Java-Chip4/StudyingRecord/tree/main/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EC%9E%90%EB%B0%94%203%ED%8C%90/2%EC%9E%A5%20-%20%EA%B0%9D%EC%B2%B4%20%EC%83%9D%EC%84%B1%EA%B3%BC%20%ED%8C%8C%EA%B4%B4/ITEM%202.md)
   - [ITEM 3. private 생성자나 열거 타입으로 싱글턴임을 보증하라](https://github.com/Java-Chip4/StudyingRecord/tree/main/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C%20%EC%9E%90%EB%B0%94%203%ED%8C%90/2%EC%9E%A5%20-%20%EA%B0%9D%EC%B2%B4%20%EC%83%9D%EC%84%B1%EA%B3%BC%20%ED%8C%8C%EA%B4%B4/ITEM%203.md)
